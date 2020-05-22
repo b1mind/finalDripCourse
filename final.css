@@ -32,7 +32,7 @@ body {
   }
 }
 
-a, section a:visited, footer a:visited {
+a {
   text-decoration: none;
 }
 
@@ -181,7 +181,7 @@ nav li {
   }
 }
 
-nav a, nav section a:visited, section nav a:visited, nav footer a:visited, footer nav a:visited {
+nav a {
   color: white;
 }
 
@@ -189,7 +189,7 @@ nav a:hover {
   color: var(--color2);
 }
 
-nav a::after, nav section a:visited::after, section nav a:visited::after, nav footer a:visited::after, footer nav a:visited::after {
+nav a::after {
   content: '';
   width: -0px;
   height: 2px;
@@ -234,10 +234,14 @@ nav a:hover::after {
   color: var(--highlight);
 }
 
-section a, footer a, section a:visited, footer a:visited {
+section a, footer a {
   margin: 0 0.2em;
   color: var(--color2);
   font-weight: 600;
+}
+
+section a:visited, footer a:visited {
+  color: var(--color2);
 }
 
 section a:hover, footer a:hover {

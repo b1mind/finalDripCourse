@@ -213,7 +213,7 @@ section {
 		color: var(--color2);
 		font-weight: 600;
 		&:visited {
-			@extend a;
+			color: var(--color2);
 		}
 		&:hover {
 			color: var(--highlight);
