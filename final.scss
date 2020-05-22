@@ -1,4 +1,8 @@
-//-//> Base settings <//
+//- //< Sassy Stuffs
+$minWidthLg: 1000px;
+$minWidthMed: 800px;
+$minWidthSml: 420px;
+//-//> Castle settings <//
 
 :root {
 	--color: #2e323f;
@@ -6,6 +10,9 @@
 	--color3: #f1f1f1;
 	--highlight: #a59678;
 	--darkColor: #3b4050;
+	--minWidthLg: 1000px;
+	--minWidthMed: 800px;
+	--minWidthSml: 420px;
 }
 
 *,
@@ -21,7 +28,7 @@ body {
 	margin: 0;
 	font-size: 16px;
 	font-family: 'Montserrat';
-	@media (min-width: 800px) {
+	@media (min-width: $minWidthMed) {
 		font-size: 18px;
 	}
 }
@@ -59,7 +66,7 @@ h3 {
 }
 
 p {
-	max-width: 77ch;
+	max-width: 72ch;
 	line-height: 1.35em;
 }
 
@@ -67,14 +74,13 @@ i.fas {
 	margin: 0 0.25rem;
 }
 //- //< end base settings <//
-
 //-//> Content is King <//
 
 .flex {
 	display: block;
 	justify-content: space-between;
 	align-items: center;
-	@media (min-width: 800px) {
+	@media (min-width: $minWidthMed) {
 		display: flex;
 	}
 }
@@ -103,6 +109,8 @@ i.fas {
 	color: var(--highlight);
 }
 
+//- //> head the wears teh crown <//
+
 header {
 	width: 100%;
 	position: fixed;
@@ -115,7 +123,6 @@ header {
 
 .scrolled {
 	background: var(--color);
-	transition: background 0.5s ease-in-out;
 }
 
 .logo {
@@ -136,7 +143,7 @@ header {
 		height: 3px;
 		background: white;
 	}
-	@media (min-width: 800px) {
+	@media (min-width: $minWidthMed) {
 		display: none;
 		visibility: hidden;
 	}
@@ -150,7 +157,7 @@ nav {
 		display: block;
 		text-transform: uppercase;
 		text-align: center;
-		@media (min-width: 800px) {
+		@media (min-width: $minWidthMed) {
 			display: inline-block;
 		}
 	}
@@ -176,11 +183,14 @@ nav {
 .hidden {
 	display: none;
 	visibility: hidden;
-	@media (min-width: 800px) {
+	@media (min-width: $minWidthMed) {
 		display: flex;
 		visibility: visible;
 	}
 }
+
+//- //< off with his head <//
+//- //> a new hero becomes king <//
 
 .hero {
 	min-height: 650px;
@@ -197,8 +207,7 @@ nav {
 	}
 }
 
-section,
-footer {
+section {
 	a {
 		margin: 0 0.2em;
 		color: var(--color2);
@@ -218,19 +227,20 @@ main {
 main {
 	.flex {
 		align-items: flex-start;
-		@media (min-width: 700px) {
+		@media (min-width: $minWidthMed) {
 			display: block;
 			text-align: center;
 		}
 		@media (min-width: 1000px) {
 			display: flex;
+			text-align: left;
 		}
 	}
 }
 
 aside {
 	display: block;
-	@media (min-width: 700px) {
+	@media (min-width: $minWidthMed) {
 		display: flex;
 	}
 	@media (min-width: 1000px) {
@@ -265,6 +275,7 @@ aside {
 }
 
 footer {
+	@extend section;
 	padding: 1em 0;
 	background-color: var(--darkColor);
 	h1 {
@@ -284,4 +295,4 @@ footer {
 	font-size: 0.75rem;
 	background: var(--color);
 }
-//-//< kill the king <//
+//-//< time to kill the king <//

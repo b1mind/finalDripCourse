@@ -4,6 +4,9 @@
   --color3: #f1f1f1;
   --highlight: #a59678;
   --darkColor: #3b4050;
+  --minWidthLg: 1000px;
+  --minWidthMed: 800px;
+  --minWidthSml: 420px;
 }
 
 *,
@@ -62,7 +65,7 @@ h3 {
 }
 
 p {
-  max-width: 77ch;
+  max-width: 72ch;
   line-height: 1.35em;
 }
 
@@ -125,8 +128,6 @@ header {
 
 .scrolled {
   background: var(--color);
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
 }
 
 .logo {
@@ -233,20 +234,18 @@ nav a:hover::after {
   color: var(--highlight);
 }
 
-section a,
-footer a {
+section a, footer a {
   margin: 0 0.2em;
   color: var(--color2);
   font-weight: 600;
 }
 
-section a:hover,
-footer a:hover {
+section a:hover, footer a:hover {
   color: var(--highlight);
   border-bottom: 2px solid var(--color2);
 }
 
-section,
+section, footer,
 main {
   padding: 2em 0;
 }
@@ -257,7 +256,7 @@ main .flex {
           align-items: flex-start;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   main .flex {
     display: block;
     text-align: center;
@@ -269,6 +268,7 @@ main .flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    text-align: left;
   }
 }
 
@@ -276,7 +276,7 @@ aside {
   display: block;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   aside {
     display: -webkit-box;
     display: -ms-flexbox;
