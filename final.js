@@ -5,8 +5,8 @@ const hero = document.querySelector('.hero')
 
 const headerObsOptions = {
 	root: null,
-	threshold: 0.75,
-	rootMargin: '0px 0px 0px 0px',
+	threshold: 0,
+	rootMargin: '-500px 0px 0px 0px',
 }
 const headerObserver = new IntersectionObserver(function (entries, observer) {
 	entries.forEach(e => {

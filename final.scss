@@ -69,11 +69,6 @@ i.fas {
 //- //< end base settings <//
 
 //-//> Content is King <//
-.flexAlways {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 
 .flex {
 	display: block;
@@ -188,10 +183,11 @@ nav {
 }
 
 .hero {
-	min-height: 620px;
+	min-height: 650px;
 	padding: 3em 1em;
 	color: white;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('https://picsum.photos/1900/620?random=1');
+
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('https://picsum.photos/1900/650?random=1') fixed no-repeat;
 	background-size: cover;
 	h1 {
 		display: inline;
