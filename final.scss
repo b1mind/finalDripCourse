@@ -212,6 +212,9 @@ section {
 		margin: 0 0.2em;
 		color: var(--color2);
 		font-weight: 600;
+		&:visited {
+			@extend a;
+		}
 		&:hover {
 			color: var(--highlight);
 			border-bottom: 2px solid var(--color2);
