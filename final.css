@@ -299,6 +299,23 @@ aside {
   background-color: var(--color3);
 }
 
+.service {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--highlight);
+  border-radius: 999px;
+}
+
+.service i {
+  position: relative;
+  top: 25%;
+  left: 1%;
+  color: var(--color);
+  font-size: 3em;
+}
+
 .content {
   min-width: 65%;
 }
