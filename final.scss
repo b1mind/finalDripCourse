@@ -74,7 +74,9 @@ i.fas {
 	justify-content: space-between;
 	align-items: center;
 }
+
 .flex {
+	display: block;
 	justify-content: space-between;
 	align-items: center;
 	@media (min-width: 800px) {
@@ -150,11 +152,11 @@ nav {
 	margin: 10px 0;
 	li {
 		padding: 0.5em;
-		display: inline-block;
+		display: block;
 		text-transform: uppercase;
-		@media (max-width: 800px) {
-			display: block;
-			text-align: center;
+		text-align: center;
+		@media (min-width: 800px) {
+			display: inline-block;
 		}
 	}
 	a {
@@ -220,9 +222,25 @@ main {
 main {
 	.flex {
 		align-items: flex-start;
+		@media (min-width: 700px) {
+			display: block;
+			text-align: center;
+		}
+		@media (min-width: 1000px) {
+			display: flex;
+		}
 	}
 }
 
+aside {
+	display: block;
+	@media (min-width: 700px) {
+		display: flex;
+	}
+	@media (min-width: 1000px) {
+		display: block;
+	}
+}
 .services {
 	text-align: center;
 	background-color: var(--color3);

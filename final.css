@@ -83,6 +83,7 @@ i.fas {
 }
 
 .flex {
+  display: block;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -180,14 +181,14 @@ nav {
 
 nav li {
   padding: 0.5em;
-  display: inline-block;
+  display: block;
   text-transform: uppercase;
+  text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   nav li {
-    display: block;
-    text-align: center;
+    display: inline-block;
   }
 }
 
@@ -266,6 +267,39 @@ main .flex {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media (min-width: 700px) {
+  main .flex {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  main .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+aside {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  aside {
+    display: block;
+  }
 }
 
 .services {
