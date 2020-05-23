@@ -101,15 +101,30 @@ i.fas {
 	color: var(--color);
 	font-weight: 800;
 	background: var(--highlight);
-	border: 1px solid var(--color);
+	border: 2px solid var(--color);
 	border-radius: 20px;
+	box-shadow: 0 0 1px 2px var(--highlight);
+	outline: transparent;
+	&:hover {
+		color: var(--color);
+		background-color: var(--color2);
+		//border: 2px solid var(--highlight);
+		box-shadow: 0 0 1px 2px white;
+	}
+	&:focus,
+	:active {
+		//- do something...
+		box-shadow: 0 0 1px 2px white;
+		border: 2px solid var(--color);
+		background: var(--highlight);
+	}
 }
 
 .highLight {
 	color: var(--highlight);
 }
 
-//- //> head the wears teh crown <//
+//- //> head that wears teh crown <//
 
 header {
 	width: 100%;
@@ -197,7 +212,7 @@ nav {
 	padding: 3em 1em;
 	color: white;
 
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('https://picsum.photos/1900/650?random=1') fixed no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('https://picsum.photos/1900/650?random=1') fixed center no-repeat;
 	background-size: cover;
 	h1 {
 		display: inline;
