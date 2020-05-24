@@ -77,11 +77,12 @@ i.fas {
 //-//> Content is King <//
 
 .flex {
-	display: block;
-	justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	@media (min-width: $minWidthMed) {
-		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
 	}
 }
 
@@ -246,18 +247,18 @@ main {
 	.flex {
 		align-items: flex-start;
 		@media (min-width: $minWidthMed) {
-			display: block;
+			flex-wrap: wrap;
 			text-align: center;
+			justify-content: center;
 		}
 		@media (min-width: 1000px) {
-			display: flex;
+			flex-wrap: nowrap;
 			text-align: left;
 		}
 	}
 }
 
 aside {
-	display: block;
 	@media (min-width: $minWidthMed) {
 		display: flex;
 	}
@@ -327,6 +328,12 @@ footer {
 	padding: 0.5em;
 	color: white;
 	font-size: 0.75rem;
+	text-align: center;
 	background: var(--color);
+}
+
+.stuff,
+.navCopy {
+	width: 100%;
 }
 //-//< time to kill the king <//

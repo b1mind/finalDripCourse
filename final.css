@@ -74,10 +74,11 @@ i.fas {
 }
 
 .flex {
-  display: block;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -85,9 +86,11 @@ i.fas {
 
 @media (min-width: 800px) {
   .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -280,22 +283,21 @@ main .flex {
 
 @media (min-width: 800px) {
   main .flex {
-    display: block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media (min-width: 1000px) {
   main .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     text-align: left;
   }
-}
-
-aside {
-  display: block;
 }
 
 @media (min-width: 800px) {
@@ -379,5 +381,11 @@ footer li {
   padding: 0.5em;
   color: white;
   font-size: 0.75rem;
+  text-align: center;
   background: var(--color);
+}
+
+.stuff,
+.navCopy {
+  width: 100%;
 }
