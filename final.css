@@ -301,8 +301,7 @@ aside a:hover {
   border-bottom: 2px solid var(--color2);
 }
 
-section, footer,
-main {
+section, footer {
   padding: 2em 0;
 }
 
