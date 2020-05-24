@@ -185,9 +185,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  top: 1em;
-  right: 1em;
+  position: relative;
+  right: -70px;
   cursor: pointer;
 }
 

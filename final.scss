@@ -165,9 +165,8 @@ header {
 	gap: 4px;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	top: 1em;
-	right: 1em;
+	position: relative;
+	right: -70px;
 	cursor: pointer;
 	@media (min-width: $minWidthMed) {
 		display: none;

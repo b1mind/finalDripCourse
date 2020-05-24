@@ -20,3 +20,7 @@ canHazBurger.addEventListener('click', e => {
 	nav.classList.toggle('hidden')
 	nav.classList.toggle('scrolled')
 })
+
+nav.addEventListener('click', e => {
+	nav.classList.toggle('hidden')
+})
