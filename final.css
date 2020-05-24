@@ -37,7 +37,6 @@ body {
 }
 
 a {
-  text-align: center;
   text-decoration: none;
 }
 
@@ -160,12 +159,18 @@ header {
   z-index: 420;
 }
 
+header .flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .scrolled {
   background: var(--color);
 }
 
 .logo {
-  width: 50%;
+  width: 45%;
 }
 
 @media (min-width: 800px) {
@@ -186,7 +191,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  right: -70px;
   cursor: pointer;
 }
 
@@ -276,17 +280,23 @@ nav a:hover::after {
   background-size: cover;
 }
 
-section a, footer a {
+section a, footer a,
+main a,
+aside a {
   margin: 0 0.2em;
   color: var(--color2);
   font-weight: 600;
 }
 
-section a:visited, footer a:visited {
+section a:visited, footer a:visited,
+main a:visited,
+aside a:visited {
   color: var(--color2);
 }
 
-section a:hover, footer a:hover {
+section a:hover, footer a:hover,
+main a:hover,
+aside a:hover {
   color: var(--highlight);
   border-bottom: 2px solid var(--color2);
 }

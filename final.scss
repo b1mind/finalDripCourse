@@ -38,7 +38,6 @@ body {
 }
 
 a {
-	text-align: center;
 	text-decoration: none;
 }
 
@@ -55,9 +54,7 @@ ul {
 h1 {
 	font-size: 3.5rem;
 	font-weight: 500;
-
 	display: inline;
-
 	span {
 		color: var(--highlight);
 	}
@@ -146,6 +143,9 @@ header {
 	background: rgba(0, 0, 0, 0.55);
 	transition: background 0.5s ease-in;
 	z-index: 420;
+	.flex {
+		justify-content: space-between;
+	}
 }
 
 .scrolled {
@@ -153,7 +153,7 @@ header {
 }
 
 .logo {
-	width: 50%;
+	width: 45%;
 	@media (min-width: $minWidthMed) {
 		width: 100%;
 		padding-right: 2em;
@@ -166,7 +166,6 @@ header {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	right: -70px;
 	cursor: pointer;
 	@media (min-width: $minWidthMed) {
 		display: none;
@@ -234,7 +233,9 @@ nav {
 	background-size: cover;
 }
 
-section {
+section,
+main,
+aside {
 	a {
 		margin: 0 0.2em;
 		color: var(--color2);
