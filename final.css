@@ -128,7 +128,6 @@ i.fas {
 .btn :active {
   -webkit-box-shadow: 0 0 1px 2px white;
           box-shadow: 0 0 1px 2px white;
-  border: 2px solid var(--color);
   background: var(--highlight);
 }
 
@@ -189,9 +188,19 @@ nav {
   margin: 10px 0;
 }
 
+@media (min-width: 800px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 nav li {
   padding: 0.5em;
-  display: block;
   text-transform: uppercase;
   text-align: center;
 }
