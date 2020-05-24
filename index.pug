@@ -16,7 +16,8 @@ html(lang="en")
   body
     header
       .flex.wrap
-        .logo KP-Final
+        img.logo(src="imgs/logo1m.png", alt="") 
+          a(href="#")
         ul.canHazBurger
           li
           li
@@ -24,11 +25,11 @@ html(lang="en")
         nav.hidden
           ul.navMain
             li
-              a(href="#") Services
+              a(href="#services") Services
             li
-              a(href="#") Features
+              a(href="#features") Features
             li
-              a(href="#") About
+              a(href="#about") About
             li
               a(href="#") Contact
           ul.navSignUp
@@ -46,7 +47,7 @@ html(lang="en")
         .cell
           p Delectus cumque, quaerat consequuntur cum quae earum voluptatibus ea neque temporibus voluptates unde, minima deleniti aliquam nostrum eaque dignissimos dolorum corrupti expedita.
           a.btn(href="#") Click Me!
-
+    #services
     section.services
       .flex.wrap
         article.cell
@@ -64,7 +65,7 @@ html(lang="en")
             i.fas.fa-vial
           h2.highLight Simple
           p Totam inventore quo alias ea dignissimos voluptas, sit quaerat facere aperiam minima corporis nobis numquam soluta perferendis corrupti illo eius itaque deserunt.
-    
+    #main
     main
       .flex.wrap
         section.content
@@ -89,7 +90,7 @@ html(lang="en")
             h2 Code 
               i.fas.fa-code
             p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia qui error non officia rerum ipsam, corporis tempore. Neque alias ullam aliquam rem magni, veritatis necessitatibus amet sint earum, itaque eaque?
-
+    #features
     section.feature
         .flex.wrap
           article.cell
@@ -105,12 +106,12 @@ html(lang="en")
           h2 something2
           p Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat.
           p Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-
+    #about
     footer
       .wrap
         h1 just scratching the surface
         .flex
-          .cell#aboutUs
+          .cell.aboutUs
             h3.highLight About Us
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quidem cupiditate iure exercitationem error. Temporibus amet provident, non sint nemo earum mollitia corrupti cum, delectus illum aut voluptatum pariatur tempore.
           .cell

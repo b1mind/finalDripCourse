@@ -1,6 +1,6 @@
-const canHazBurger = document.querySelector('.canHazBurger')
-const nav = document.getElementsByTagName('nav')[0]
 const header = document.getElementsByTagName('header')[0]
+const nav = document.getElementsByTagName('nav')[0]
+const canHazBurger = document.querySelector('.canHazBurger')
 const hero = document.querySelector('.hero')
 
 const headerObsOptions = {

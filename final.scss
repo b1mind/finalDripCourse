@@ -21,6 +21,10 @@ $minWidthSml: 420px;
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	height: 100%;
@@ -34,6 +38,7 @@ body {
 }
 
 a {
+	text-align: center;
 	text-decoration: none;
 }
 
@@ -50,6 +55,12 @@ ul {
 h1 {
 	font-size: 3.5rem;
 	font-weight: 500;
+
+	display: inline;
+
+	span {
+		color: var(--highlight);
+	}
 }
 
 h1,
@@ -73,6 +84,7 @@ p {
 i.fas {
 	margin: 0 0.25rem;
 }
+
 //- //< end base settings <//
 //-//> Content is King <//
 
@@ -80,6 +92,7 @@ i.fas {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
 	@media (min-width: $minWidthMed) {
 		flex-wrap: nowrap;
 		justify-content: space-between;
@@ -100,7 +113,8 @@ i.fas {
 	padding: 0.5em 1.5em;
 	display: inline-block;
 	color: var(--color);
-	font-weight: 800;
+	font-family: 'Rubik';
+	font-weight: bolder;
 	background: var(--highlight);
 	border: 2px solid var(--color);
 	border-radius: 20px;
@@ -139,7 +153,11 @@ header {
 }
 
 .logo {
-	min-width: 150px;
+	width: 50%;
+	@media (min-width: $minWidthMed) {
+		width: 100%;
+		padding-right: 2em;
+	}
 }
 
 .canHazBurger {
@@ -151,14 +169,14 @@ header {
 	top: 1em;
 	right: 1em;
 	cursor: pointer;
+	@media (min-width: $minWidthMed) {
+		display: none;
+		visibility: hidden;
+	}
 	li {
 		width: 25px;
 		height: 3px;
 		background: white;
-	}
-	@media (min-width: $minWidthMed) {
-		display: none;
-		visibility: hidden;
 	}
 }
 
@@ -215,12 +233,6 @@ nav {
 
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('https://picsum.photos/1900/650?random=1') fixed center no-repeat;
 	background-size: cover;
-	h1 {
-		display: inline;
-	}
-	span {
-		color: var(--highlight);
-	}
 }
 
 section {
@@ -258,26 +270,20 @@ main {
 	}
 }
 
-aside {
-	@media (min-width: $minWidthMed) {
-		display: flex;
-	}
-	@media (min-width: 1000px) {
-		display: block;
-	}
-}
-
 .services {
 	text-align: center;
 	background-color: var(--color3);
 }
+
 .service {
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;
 	position: relative;
 	background: var(--highlight);
+	border: 3px solid var(--color3);
 	border-radius: 999px;
+	box-shadow: 0 0 1px 4px var(--highlight);
 	i {
 		position: relative;
 		top: 25%;
@@ -294,7 +300,13 @@ aside {
 .breakDown {
 	min-width: 35%;
 	text-align: center;
-	color: white;
+	color: var(--color3);
+	@media (min-width: $minWidthMed) {
+		display: flex;
+	}
+	@media (min-width: 1000px) {
+		display: block;
+	}
 	.cell {
 		margin: 1em;
 		background-color: var(--darkColor);
@@ -302,26 +314,38 @@ aside {
 }
 
 .feature {
-	color: white;
+	color: var(--color3);
+	text-align: right;
 	background-color: var(--darkColor);
 	&--two {
-		background-color: var(--highlight);
+		@extend .feature;
+		text-align: left;
+		background-color: var(--color2);
+		.flex {
+			flex-wrap: wrap-reverse;
+			@media (min-width: $minWidthMed) {
+				flex-wrap: nowrap;
+			}
+		}
 	}
 }
 
 footer {
 	@extend section;
 	padding: 1em 0;
+	color: var(--color3);
 	background-color: var(--darkColor);
-	h1 {
-		text-align: center;
-	}
+	text-align: center;
 	.cell ul {
 		min-width: 150px;
 	}
 	li {
 		padding: 0.25em;
 	}
+}
+
+#aboutUs {
+	text-align: left;
 }
 
 .copyright {
@@ -337,3 +361,13 @@ footer {
 	width: 100%;
 }
 //-//< time to kill the king <//
+//todo fix anchors for fixed header
+//- //> Hax for anchors testing...3
+#services,
+#features,
+#about {
+	height: 100px;
+	margin-top: -100px;
+	display: block;
+	visibility: hidden;
+}

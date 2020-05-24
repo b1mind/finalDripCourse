@@ -16,6 +16,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -33,6 +37,7 @@ body {
 }
 
 a {
+  text-align: center;
   text-decoration: none;
 }
 
@@ -49,6 +54,11 @@ ul {
 h1 {
   font-size: 3.5rem;
   font-weight: 500;
+  display: inline;
+}
+
+h1 span {
+  color: var(--highlight);
 }
 
 h1,
@@ -82,6 +92,9 @@ i.fas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 800px) {
@@ -108,7 +121,8 @@ i.fas {
   padding: 0.5em 1.5em;
   display: inline-block;
   color: var(--color);
-  font-weight: 800;
+  font-family: 'Rubik';
+  font-weight: bolder;
   background: var(--highlight);
   border: 2px solid var(--color);
   border-radius: 20px;
@@ -151,7 +165,14 @@ header {
 }
 
 .logo {
-  min-width: 150px;
+  width: 50%;
+}
+
+@media (min-width: 800px) {
+  .logo {
+    width: 100%;
+    padding-right: 2em;
+  }
 }
 
 .canHazBurger {
@@ -170,17 +191,17 @@ header {
   cursor: pointer;
 }
 
-.canHazBurger li {
-  width: 25px;
-  height: 3px;
-  background: white;
-}
-
 @media (min-width: 800px) {
   .canHazBurger {
     display: none;
     visibility: hidden;
   }
+}
+
+.canHazBurger li {
+  width: 25px;
+  height: 3px;
+  background: white;
 }
 
 nav {
@@ -256,14 +277,6 @@ nav a:hover::after {
   background-size: cover;
 }
 
-.hero h1 {
-  display: inline;
-}
-
-.hero span {
-  color: var(--highlight);
-}
-
 section a, footer a {
   margin: 0 0.2em;
   color: var(--color2);
@@ -309,20 +322,6 @@ main .flex {
   }
 }
 
-@media (min-width: 800px) {
-  aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width: 1000px) {
-  aside {
-    display: block;
-  }
-}
-
 .services {
   text-align: center;
   background-color: var(--color3);
@@ -334,7 +333,10 @@ main .flex {
   margin: 0 auto;
   position: relative;
   background: var(--highlight);
+  border: 3px solid var(--color3);
   border-radius: 999px;
+  -webkit-box-shadow: 0 0 1px 4px var(--highlight);
+          box-shadow: 0 0 1px 4px var(--highlight);
 }
 
 .service i {
@@ -352,7 +354,21 @@ main .flex {
 .breakDown {
   min-width: 35%;
   text-align: center;
-  color: white;
+  color: var(--color3);
+}
+
+@media (min-width: 800px) {
+  .breakDown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  .breakDown {
+    display: block;
+  }
 }
 
 .breakDown .cell {
@@ -360,21 +376,33 @@ main .flex {
   background-color: var(--darkColor);
 }
 
-.feature {
-  color: white;
+.feature, .feature--two {
+  color: var(--color3);
+  text-align: right;
   background-color: var(--darkColor);
 }
 
 .feature--two {
-  background-color: var(--highlight);
+  text-align: left;
+  background-color: var(--color2);
+}
+
+.feature--two .flex {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+@media (min-width: 800px) {
+  .feature--two .flex {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 footer {
   padding: 1em 0;
+  color: var(--color3);
   background-color: var(--darkColor);
-}
-
-footer h1 {
   text-align: center;
 }
 
@@ -384,6 +412,10 @@ footer .cell ul {
 
 footer li {
   padding: 0.25em;
+}
+
+#aboutUs {
+  text-align: left;
 }
 
 .copyright {
@@ -397,4 +429,13 @@ footer li {
 .stuff,
 .navCopy {
   width: 100%;
+}
+
+#services,
+#features,
+#about {
+  height: 100px;
+  margin-top: -100px;
+  display: block;
+  visibility: hidden;
 }
